@@ -174,7 +174,7 @@ select {
     border-style: none;
     font-size: 1.1rem;
     border-radius: 12px;
-    width: max(100px, 6vw);
+    width: max(120px, 7vw);
     height: max(50px, 3vh);
     background: #dbeafe;
 }

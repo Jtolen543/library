@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <script src="javascript.js" defer></script>
+</head>
+<body>
+    <div class="action-bar">
+        <div id="header"><img src="./images/library-reading-svgrepo-com.svg" id="logo">MyLibStore</div>
+        <div class="button-container">
+            <dialog>
+                <form id="style-form">
+                    <div class="dialog-form">
+                        <div>Add a Book</div>
+                        <button autofocus id="close-button">X</button>
+                    </div>
+                    <div id="style-input">Author: *<input type="text" id="author" required></div>
+                    <div id="style-input">Title: *<input type="text" id="title" required></div>
+                    <div id="style-input">Pages: *<input type="number" id="pages" required></div>
+                    <div id="style-input">Upload Image: (optional):<input type="text" id="image"></div>
+                    <div id="style-box">Finished?<input type="checkbox" id="check"></div>
+                    <button type="submit" id="style-button">Submit</button>
+                </form>
+            </dialog>
+            <button class="add-book" id="action-button">Add Book</button>
+            <button class="delete-all" id="action-button">Delete All Books</button>
+            <button class="hide-filter" id="action-button">Hide Details</button>
+        </div>
+    </div>
+    <div class="details-bar">
+        <div class="details-search">
+            <div>Completion: 
+                <select name="filter" id="book-filter">
+                    <option value="all">All</option>
+                    <option value="read">Finished</option>
+                    <option value="unread">Unfinished</option>
+                </select>
+            </div>
+        </div>
+        <div class="details-container">
+            <div class="total-books" id="details-display">Total Books In Library: 0</div>
+            <div class="total-read" id="details-display">Total Books Read: 0</div>
+            <div class="total-unread" id="details-display">Total Books Unread: 0</div>
+        </div>
+    </div>
+    <div class="books-container">
+
+    </div>
+</body>
+</html>

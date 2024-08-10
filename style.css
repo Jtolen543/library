@@ -1,0 +1,265 @@
+body {
+    background-color: #082f49;
+    display: grid;
+    grid-template-rows: repeat(auto, auto);
+    margin: auto;
+    font-family: "Roboto";
+    color: #e0f2fe;
+    font-weight: bold;
+    gap: 1.4em;
+}
+
+.action-bar {
+    grid-row: 1 / 2;
+    background: #0ea5e9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 1.8rem;
+    gap: 40px;
+}
+
+#logo {
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#action-button {
+    width: max(80px , 9vw);
+    height: max(40px, 6vh);
+    background: #0c4a6e;
+    font-family: "Roboto";
+    color: #e0f2fe;
+    font-weight: bold;
+    font-size: max(16px, 1vw);
+    border-style: none;
+    border-radius: 16px;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+
+}
+
+.details-bar {
+    grid-row: 2 / 3;
+    justify-self: center;
+    background: #0284c7;
+    width: 90%;
+    border-radius: 10px;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    gap: 40px;
+}
+
+.details-container {
+    display: flex;
+    gap: 20px;
+}
+
+#details-display {
+    background: #0c4a6e;
+    padding: 20px;
+    border-radius: 16px;
+}
+
+.books-container {
+    grid-row: 3 / 4; 
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-rows: repeat(auto-fill, 300px);
+    justify-self: center;
+    background: #0c4a6e;
+    padding: 20px;
+    border-radius: 12px;
+    gap: 20px;
+    height: fit-content;
+}
+
+dialog {
+    padding: 0;
+    width: 350px;
+    height: 475px;
+    background: #7dd3fc;
+}
+
+.dialog-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#style-form {
+    align-self: center;
+    font-size: 1.2rem;
+    background: #7dd3fc;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+#close-button {
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border-style: none;
+    background-color: #7dd3fc;
+    cursor: pointer
+}
+
+#close-button:hover {
+    transition: .3s;
+    color: rgb(241, 47, 47);
+    transform: rotate(180deg);
+}
+
+#style-input {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type='text'], input[type='number'] {
+    font-size: 1.1rem;
+}
+
+input[type='checkbox'] {
+    width: 30px;
+    height: 30px;
+    
+}
+
+#style-button {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color:#e0f2fe;
+    background:#0c4a6e;
+    border-style: none;
+}
+
+#style-button:hover {
+    transition: .3s;
+    background:#1c6691;
+    cursor: pointer;
+}
+
+#style-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+::backdrop {
+    background: black;
+    opacity: .4;
+    margin: 0;
+}
+
+select {
+    margin: 12px;
+    border-style: none;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    width: max(100px, 6vw);
+    height: max(50px, 3vh);
+    background: #dbeafe;
+}
+
+select:hover {
+    transition: .3s;
+    cursor: pointer;
+    background:#bae6fd
+}
+
+.book-card {
+    display: flex;
+    flex-direction: column;
+    background: #bae6fd;
+    border-radius: 12px;
+    padding: 20px;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    justify-content: center;
+    gap: 12px;
+}
+
+.read_button {
+    width: 60px;
+    height: 60px;
+}
+
+.trash_button {
+    width: 30px;
+    height: 30px;
+    background-color: #bae6fd;
+    background-image: url("./images/trash-svgrepo-com.svg");
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    border: none; 
+    cursor: pointer;
+}
+
+.trash_button:hover {
+    transition: .3s;
+    width: 40px;
+    height: 40px;
+}
+
+.read_book {
+    width: 30px;
+    height: 30px;
+    background-color: #bae6fd;
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    border: none; 
+    cursor: pointer;
+}
+
+.read_book:hover {
+    transition: .3s;
+    width: 40px;
+    height: 40px;
+}
+
+.card-button-action {
+    display: flex;
+    justify-content: end;
+    gap: 25px;
+    margin-top: auto;
+}
+
+#action-button:hover {
+    transition: .3s;
+    background:#206288;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .action-bar {
+        flex-direction: column;
+    }
+    .details-bar {
+        flex-direction: column;
+    }
+    #action-button {
+        width: 25vw;
+        height: 6vh;
+    }
+}

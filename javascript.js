@@ -6,6 +6,7 @@ function Book(author, title, pages, read=false, image="") {
     this.pages = pages
     this.read = read
     this.image = image
+    this.position = library.length
 }
 
 const book_button = document.querySelector(".add-book")
@@ -89,7 +90,8 @@ function AddToLibrary() {
         trash_button.classList.add("trash_button")
         trash_button.id = index
         trash_button.addEventListener("click", ()=> {
-            library.splice(index, 1)
+            library.splice(element.position, 1)
+            updatePosition()
             AddToLibrary()
             updateStats()
         })
@@ -141,4 +143,10 @@ function filterBooks() {
         return library.filter((book) => book.read)
     else (filter === "unread") 
         return library.filter((book) => !book.read)
-}       
+}
+
+function updatePosition() {
+    library.forEach((element) => {
+        element.position = library.indexOf(element)
+    })
+}

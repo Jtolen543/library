@@ -1,12 +1,14 @@
 const library = []
 
-function Book(author, title, pages, read=false, image="") {
-    this.author = author
-    this.title = title
-    this.pages = pages
-    this.read = read
-    this.image = image
-    this.position = library.length
+class Book{
+    constructor (author, title, pages, read=false, image="") {
+        this.author = author
+        this.title = title
+        this.pages = pages
+        this.read = read
+        this.image = image
+        this.position = library.length
+    }
 }
 
 const book_button = document.querySelector(".add-book")
